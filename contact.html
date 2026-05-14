@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Ubridge Group</title>
+  <meta name="description" content="Get in touch with Ubridge Group to explore partnership and distribution opportunities." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo">U<span>bridge</span> Group</a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="brands.html">Our Brands</a></li>
+      <li><a href="retail.html">Our Retail</a></li>
+      <li><a href="contact.html" class="btn btn--yellow active">Contact</a></li>
+    </ul>
+    <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="label">Let's Talk</span>
+      <h1 class="page-hero__title">Get In<br><span>Touch</span></h1>
+      <p class="page-hero__sub">Have a project in mind? We'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT CONTENT -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Info Column -->
+        <div class="fade-up">
+          <h2 class="contact-info__title">Let's Build Something Together</h2>
+          <p class="contact-info__body">Whether you're a European brand looking to enter the American market, a retailer interested in our products, or a business exploring partnership opportunities — we're here to help.</p>
+
+          <div class="contact-detail">
+            <div class="contact-detail__icon">📧</div>
+            <div>
+              <div class="contact-detail__label">Email</div>
+              <div class="contact-detail__value">info@ubridgegroup.com</div>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail__icon">📦</div>
+            <div>
+              <div class="contact-detail__label">Fulfillment Center</div>
+              <div class="contact-detail__value">BH Prep — U.S. Midwest</div>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail__icon">🌐</div>
+            <div>
+              <div class="contact-detail__label">Serving</div>
+              <div class="contact-detail__value">United States — Nationwide</div>
+            </div>
+          </div>
+
+          <div style="margin-top:40px; padding:28px 32px; background:var(--off-white); border-left:3px solid var(--yellow);">
+            <div style="font-family:var(--font-display); font-size:12px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--yellow-dim); margin-bottom:10px;">Response Time</div>
+            <p style="font-size:15px; color:var(--text-mid); line-height:1.7;">We typically respond to all inquiries within 1–2 business days. For urgent matters, please mention it in your message.</p>
+          </div>
+        </div>
+
+        <!-- Form Column -->
+        <div class="contact-form fade-up" style="transition-delay:0.15s">
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Jane" required />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Smith" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+            </div>
+            <div class="form-group">
+              <label for="company">Company (optional)</label>
+              <input type="text" id="company" name="company" placeholder="Your Company" />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option value="" disabled selected>Select a topic…</option>
+                <option value="partnership">Brand Partnership</option>
+                <option value="distribution">Distribution Inquiry</option>
+                <option value="retail">Retail / Wholesale</option>
+                <option value="fulfillment">Fulfillment Services</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us about your project or inquiry…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--yellow" style="width:100%; justify-content:center; display:block; text-align:center;">
+              Send Message
+            </button>
+          </form>
+          <div id="formSuccess" style="display:none; margin-top:24px; padding:24px 28px; background:rgba(245,196,0,0.1); border-left:3px solid var(--yellow);">
+            <div style="font-family:var(--font-display); font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--navy); margin-bottom:6px;">Message Sent!</div>
+            <p style="font-size:14px; color:var(--text-mid);">Thank you for reaching out. We'll be in touch within 1–2 business days.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__logo">U<span>bridge</span> Group</div>
+          <p class="footer__tagline">Bridging Europe's finest brands with the American market through quality and craftsmanship.</p>
+        </div>
+        <div>
+          <div class="footer__heading">Navigate</div>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="brands.html">Our Brands</a></li>
+            <li><a href="retail.html">Our Retail</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__heading">Policy</div>
+          <ul class="footer__links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="brands.html">Our Brands</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2026 Ubridge Group. All rights reserved.</span>
+        <div class="footer__socials">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="X / Twitter">𝕏</a>
+          <a href="#" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
