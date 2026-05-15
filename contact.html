@@ -10,7 +10,7 @@
 <body>
 
   <nav class="nav" id="nav">
-    <a href="index.html" class="nav__logo">U<span>bridge</span> Group</a>
+    <a href="index.html" class="nav__logo"><img src="images/ubridgeLogo.png" alt="Ubridge Group" class="nav__logo-img" /></a>
     <ul class="nav__links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
@@ -54,7 +54,7 @@
             <div class="contact-detail__icon">📦</div>
             <div>
               <div class="contact-detail__label">Fulfillment Center</div>
-              <div class="contact-detail__value">59 SW 12th Ave, Unit 102<br>Dania Beach, FL 33446</div>
+              <div class="contact-detail__value"><strong>BH Prep Fulfillment Center</strong><br>59 SW 12th Ave, Unit 102<br>Dania Beach, FL 33446</div>
             </div>
           </div>
 
@@ -74,48 +74,59 @@
 
         <!-- Form Column -->
         <div class="contact-form fade-up" style="transition-delay:0.15s">
-          <form id="contactForm" onsubmit="handleSubmit(event)">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="firstName" placeholder="Jane" required />
-              </div>
-              <div class="form-group">
-                <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" name="lastName" placeholder="Smith" required />
-              </div>
+        <!-- ════════════════════════════════════════════════
+             FORMSPREE SETUP (one-time, 2 minutes):
+             1. Go to https://formspree.io and sign up free
+             2. Click "New Form", name it "Ubridge Contact"
+             3. Copy your form endpoint — looks like:
+                https://formspree.io/f/xyzabcde
+             4. Replace YOUR_FORM_ID below with that endpoint
+             5. Done — submissions go to ukrbridge@gmail.com
+             ════════════════════════════════════════════════ -->
+        <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="_replyto" value="ukrbridge@gmail.com" />
+          <input type="hidden" name="_subject" value="New enquiry from Ubridge Group website" />
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Jane" required />
             </div>
             <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Smith" required />
             </div>
-            <div class="form-group">
-              <label for="company">Company (optional)</label>
-              <input type="text" id="company" name="company" placeholder="Your Company" />
-            </div>
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <select id="subject" name="subject" required>
-                <option value="" disabled selected>Select a topic…</option>
-                <option value="partnership">Brand Partnership</option>
-                <option value="distribution">Distribution Inquiry</option>
-                <option value="retail">Retail / Wholesale</option>
-                <option value="fulfillment">Fulfillment Services</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Tell us about your project or inquiry…" required></textarea>
-            </div>
-            <button type="submit" class="btn btn--yellow" style="width:100%; justify-content:center; display:block; text-align:center;">
-              Send Message
-            </button>
-          </form>
-          <div id="formSuccess" style="display:none; margin-top:24px; padding:24px 28px; background:rgba(245,196,0,0.1); border-left:3px solid var(--yellow);">
-            <div style="font-family:var(--font-display); font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--navy); margin-bottom:6px;">Message Sent!</div>
-            <p style="font-size:14px; color:var(--text-mid);">Thank you for reaching out. We'll be in touch within 1–2 business days.</p>
           </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+          </div>
+          <div class="form-group">
+            <label for="company">Company (optional)</label>
+            <input type="text" id="company" name="company" placeholder="Your Company" />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" required>
+              <option value="" disabled selected>Select a topic…</option>
+              <option value="Brand Partnership">Brand Partnership</option>
+              <option value="Distribution Inquiry">Distribution Inquiry</option>
+              <option value="Retail / Wholesale">Retail / Wholesale</option>
+              <option value="Fulfillment Services">Fulfillment Services</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project or inquiry…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--yellow" style="width:100%; display:block; text-align:center;">
+            Send Message
+          </button>
+        </form>
+        <div id="formSuccess" style="display:none; margin-top:24px; padding:24px 28px; background:rgba(245,196,0,0.1); border-left:3px solid var(--yellow);">
+          <div style="font-family:var(--font-display); font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--navy); margin-bottom:6px;">Message Sent!</div>
+          <p style="font-size:14px; color:var(--text-mid);">Thank you for reaching out. We'll be in touch within 1–2 business days.</p>
+        </div>
         </div>
 
       </div>
@@ -127,7 +138,7 @@
     <div class="container">
       <div class="footer__inner">
         <div>
-          <div class="footer__logo">U<span>bridge</span> Group</div>
+          <a href="index.html" class="footer__logo"><img src="images/ubridgeLogo.png" alt="Ubridge Group" class="footer__logo-img" /></a>
           <p class="footer__tagline">Bridging Europe's finest brands with the American market through quality and craftsmanship.</p>
         </div>
         <div>
@@ -156,12 +167,5 @@
   </footer>
 
   <script src="main.js"></script>
-  <script>
-    function handleSubmit(e) {
-      e.preventDefault();
-      document.getElementById('contactForm').style.display = 'none';
-      document.getElementById('formSuccess').style.display = 'block';
-    }
-  </script>
 </body>
 </html>
